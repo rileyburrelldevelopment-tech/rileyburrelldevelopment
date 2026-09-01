@@ -1,26 +1,14 @@
-# Riley Burrell Development Website
+# Riley Burrell Development website redesign
 
-This is a static website for Riley Burrell Development and EchoPath.
+This build uses folder-based pages such as `about/index.html`, `faq/index.html`, and `android/index.html`.
 
-## Pages
-- index.html - Home page
-- echopath.html - EchoPath app information
-- about.html - Riley Burrell Development introduction
-- support.html - App Store Support URL page
-- privacy.html - App Store Privacy Policy URL page
-- terms.html - Terms of Use
-- styles.css - Website styling
-- script.js - Mobile menu behaviour
+For reliability, every internal navigation link points to the real `index.html` file inside the destination folder. This works when previewing locally and when deployed on GitHub Pages. After a page loads over HTTP/HTTPS, `script.js` removes `index.html` from the visible browser address, giving clean URLs such as `/about/` and `/faq/`.
 
-## App Store URLs
-After publishing, use these URLs in App Store Connect:
-- Support URL: https://YOUR-DOMAIN/support.html
-- Privacy Policy URL: https://YOUR-DOMAIN/privacy.html
+Shared files remain at the site root:
+- `styles.css`
+- `script.js`
+- `assets/`
 
-Replace YOUR-DOMAIN with your actual website domain or hosting URL.
+The homepage tagline **Apps. Games. Innovation.** appears directly under the Riley Burrell Development eyebrow in the main hero and is repeated in the footer.
 
-## How to edit
-Open this folder in Visual Studio Code.
-
-## How to publish
-You can publish this site with GitHub Pages, Cloudflare Pages, or Netlify.
+The `CNAME` file remains configured for the existing custom domain.
