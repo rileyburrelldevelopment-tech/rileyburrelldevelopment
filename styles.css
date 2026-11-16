@@ -133,3 +133,17 @@ body.menu-open {
   overflow: hidden !important;
   overscroll-behavior: none;
 }
+
+/* Preserve intrinsic aspect ratios as images scale to smaller screens. */
+:where(img[width][height]){max-width:100%;height:auto}
+#android-beta a,#beta-applications + p{overflow-wrap:anywhere}
+
+/* Compact vertical rhythm without reducing touch target sizes or legibility. */
+.section{padding-top:54px;padding-bottom:54px}
+.page-hero,.hero{padding-top:52px;padding-bottom:46px}
+.prose h2{margin-top:28px;margin-bottom:10px;font-size:clamp(1.35rem,2.5vw,1.9rem)}
+.prose p{margin-top:0;margin-bottom:13px;line-height:1.58}
+.site-footer{padding-top:38px;padding-bottom:18px}
+.footer-grid{gap:28px}
+.phone-gallery{gap:16px}
+@media(max-width:480px){.section{padding-top:34px;padding-bottom:34px}.page-hero,.hero{padding-top:32px;padding-bottom:30px}.prose h2{margin-top:24px}}
